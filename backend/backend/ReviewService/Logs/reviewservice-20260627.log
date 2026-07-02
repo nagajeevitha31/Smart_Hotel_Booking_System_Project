@@ -1,0 +1,26 @@
+2026-06-27 23:13:20.957 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-27 23:13:23.700 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-27 23:13:24.495 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-27 23:13:24.833 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:13:24.838 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-27 23:13:24.840 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend\backend\ReviewService
+2026-06-27 23:32:47.240 +05:30 [INF] ReviewService | Start processing HTTP request PUT http://localhost:5002/api/hotels/2/rating
+2026-06-27 23:32:47.252 +05:30 [INF] ReviewService | Sending HTTP request PUT http://localhost:5002/api/hotels/2/rating
+2026-06-27 23:32:47.450 +05:30 [INF] ReviewService | Received HTTP response headers after 192.7811ms - 200
+2026-06-27 23:32:47.458 +05:30 [INF] ReviewService | End processing HTTP request after 226.9543ms - 200
+2026-06-27 23:34:01.934 +05:30 [INF] ReviewService | Start processing HTTP request PUT http://localhost:5002/api/hotels/5/rating
+2026-06-27 23:34:01.938 +05:30 [INF] ReviewService | Sending HTTP request PUT http://localhost:5002/api/hotels/5/rating
+2026-06-27 23:34:01.963 +05:30 [INF] ReviewService | Received HTTP response headers after 22.3375ms - 200
+2026-06-27 23:34:01.965 +05:30 [INF] ReviewService | End processing HTTP request after 31.7791ms - 200
+2026-06-27 23:49:05.534 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-27 23:49:07.829 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-27 23:49:08.615 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-27 23:49:08.902 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:49:09.519 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-27 23:49:12.328 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend\backend\ReviewService
+2026-06-27 23:56:02.346 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-27 23:56:04.464 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-27 23:56:07.907 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-27 23:56:08.260 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:56:08.570 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-27 23:56:08.589 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend\backend\ReviewService

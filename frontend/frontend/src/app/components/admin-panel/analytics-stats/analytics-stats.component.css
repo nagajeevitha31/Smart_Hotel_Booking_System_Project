@@ -1,0 +1,63 @@
+.mb-8 { 
+  margin-bottom: 2rem; 
+}
+
+.analytics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .analytics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .analytics-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🎯 FIXED: Forced background color + flat crisp border so the 12px radius actually shows up */
+.stat-card, 
+[class*="card"], 
+section > div {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius-md) !important; /* Clean 12px rounding */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none !important; /* Strictly flat */
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🎯 FIXED: Ensures the bold headers and numbers like "Register New Hotel" or "₹5,000.00" pull through perfectly */
+.stat-num, 
+h2, 
+h3, 
+[class*="title"] {
+  font-family: var(--font-family-title);
+  color: var(--text-primary) !important;
+  font-size: 1.5rem;
+  font-weight: 700; /* Crisp 700 weight matching the Outfit font scale */
+  display: block !important;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

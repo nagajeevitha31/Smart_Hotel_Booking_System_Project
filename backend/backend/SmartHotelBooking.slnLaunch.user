@@ -1,0 +1,39 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ApiGateway\\ApiGateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AuthService\\AuthService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BookingService\\BookingService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "HotelService\\HotelService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "LoyaltyService\\LoyaltyService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PaymentService\\PaymentService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ReviewService\\ReviewService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "RoomService\\RoomService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

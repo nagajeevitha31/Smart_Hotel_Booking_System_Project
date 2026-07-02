@@ -1,0 +1,12 @@
+2026-06-29 12:41:30.930 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-29 12:41:32.824 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-29 12:41:34.257 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-29 12:41:34.415 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-29 12:41:34.417 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-29 12:41:34.419 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\ReviewService
+2026-06-29 14:19:35.264 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-29 14:19:36.629 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-29 14:19:37.050 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-29 14:19:37.180 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-29 14:19:37.182 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-29 14:19:37.183 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\ReviewService

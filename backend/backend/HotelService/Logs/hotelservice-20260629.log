@@ -1,0 +1,12 @@
+2026-06-29 12:41:30.673 +05:30 [INF] HotelService | Starting Hotel Service...
+2026-06-29 12:41:32.168 +05:30 [INF] HotelService | Hotel Service started successfully on port 5002
+2026-06-29 12:41:34.229 +05:30 [INF] HotelService | Now listening on: http://localhost:5002
+2026-06-29 12:41:34.369 +05:30 [INF] HotelService | Application started. Press Ctrl+C to shut down.
+2026-06-29 12:41:34.575 +05:30 [INF] HotelService | Hosting environment: Development
+2026-06-29 12:41:34.602 +05:30 [INF] HotelService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\HotelService
+2026-06-29 14:19:36.178 +05:30 [INF] HotelService | Starting Hotel Service...
+2026-06-29 14:19:37.364 +05:30 [INF] HotelService | Hotel Service started successfully on port 5002
+2026-06-29 14:19:37.753 +05:30 [INF] HotelService | Now listening on: http://localhost:5002
+2026-06-29 14:19:37.859 +05:30 [INF] HotelService | Application started. Press Ctrl+C to shut down.
+2026-06-29 14:19:37.890 +05:30 [INF] HotelService | Hosting environment: Development
+2026-06-29 14:19:37.892 +05:30 [INF] HotelService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\HotelService

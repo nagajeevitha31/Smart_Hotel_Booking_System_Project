@@ -1,0 +1,14 @@
+2026-06-29 12:41:30.500 +05:30 [INF] AuthService | Starting Auth Service...
+2026-06-29 12:41:31.127 +05:30 [INF] AuthService | JWT configured with Issuer: SmartHotelBooking
+2026-06-29 12:41:31.703 +05:30 [INF] AuthService | Auth Service started successfully on port 5001
+2026-06-29 12:41:34.229 +05:30 [INF] AuthService | Now listening on: http://localhost:5001
+2026-06-29 12:41:34.342 +05:30 [INF] AuthService | Application started. Press Ctrl+C to shut down.
+2026-06-29 12:41:34.351 +05:30 [INF] AuthService | Hosting environment: Development
+2026-06-29 12:41:34.583 +05:30 [INF] AuthService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\AuthService
+2026-06-29 14:19:36.910 +05:30 [INF] AuthService | Starting Auth Service...
+2026-06-29 14:19:38.525 +05:30 [INF] AuthService | JWT configured with Issuer: SmartHotelBooking
+2026-06-29 14:19:42.063 +05:30 [INF] AuthService | Auth Service started successfully on port 5001
+2026-06-29 14:19:43.823 +05:30 [INF] AuthService | Now listening on: http://localhost:5001
+2026-06-29 14:19:43.957 +05:30 [INF] AuthService | Application started. Press Ctrl+C to shut down.
+2026-06-29 14:19:43.973 +05:30 [INF] AuthService | Hosting environment: Development
+2026-06-29 14:19:43.978 +05:30 [INF] AuthService | Content root path: C:\Users\2492194\Downloads\backend 3\backend\AuthService

@@ -1,0 +1,139 @@
+/* Utility Helper Classes */
+.mb-4 { margin-bottom: 1rem; }
+.mt-3 { margin-top: 0.75rem; }
+.w-full { width: 100%; }
+
+/* Main Card Shell Configuration */
+.room-card {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: var(--border-color);
+  transition: all 0.2s ease;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.light-theme .room-card {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.room-card:hover {
+  border-color: var(--border-color-hover);
+}
+
+/* Flex Grid Container Layout */
+.room-main-info {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Room Graphic Media Section */
+.room-image-side {
+  width: 200px;
+  min-width: 200px;
+  height: 135px;
+  border-radius: calc(var(--border-radius-md) - 4px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.room-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover .room-card-image {
+  transform: scale(1.05);
+}
+
+/* Left Metadata Column Details */
+.room-details-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.room-type-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.room-type {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.room-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Feature Badge Lists */
+.room-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.room-am-badge {
+  font-size: 0.75rem;
+  color: var(--accent-indigo);
+  font-weight: 500;
+}
+
+/* Right Pricing Split Column */
+.room-price-right {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--border-color);
+  padding-left: 1.5rem;
+}
+
+.price-num {
+  font-family: var(--font-family-title);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.price-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Responsive Fluid Breakdown Rules (Mobile / Tablet) */
+@media (max-width: 768px) {
+  .room-main-info {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .room-image-side {
+    width: 100%;
+    min-width: 100%;
+    height: 180px;
+  }
+
+  .room-price-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+}

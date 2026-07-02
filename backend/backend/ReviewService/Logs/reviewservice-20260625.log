@@ -1,0 +1,114 @@
+2026-06-25 10:27:35.468 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 10:27:40.109 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 10:27:41.035 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 10:27:41.187 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:27:41.199 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 10:27:41.242 +05:30 [INF] ReviewService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 10:31:30.472 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 10:31:34.021 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 10:31:34.698 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 10:31:34.933 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:31:34.990 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 10:31:35.261 +05:30 [INF] ReviewService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 10:45:56.282 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 10:45:56.576 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 10:46:02.978 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 10:46:03.248 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 10:57:44.984 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 10:57:48.740 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 10:57:49.568 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 10:57:49.754 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:57:49.881 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 10:57:49.883 +05:30 [INF] ReviewService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 11:00:09.585 +05:30 [INF] ReviewService | Start processing HTTP request PUT http://localhost:5002/api/hotels/2/rating
+2026-06-25 11:00:09.592 +05:30 [INF] ReviewService | Sending HTTP request PUT http://localhost:5002/api/hotels/2/rating
+2026-06-25 11:00:09.884 +05:30 [INF] ReviewService | Received HTTP response headers after 286.5421ms - 200
+2026-06-25 11:00:09.894 +05:30 [INF] ReviewService | End processing HTTP request after 314.9938ms - 200
+2026-06-25 11:12:01.997 +05:30 [INF] ReviewService | Start processing HTTP request GET http://localhost:5002/api/hotels/2
+2026-06-25 11:12:02.000 +05:30 [INF] ReviewService | Sending HTTP request GET http://localhost:5002/api/hotels/2
+2026-06-25 11:12:02.048 +05:30 [INF] ReviewService | Received HTTP response headers after 45.6796ms - 200
+2026-06-25 11:12:02.051 +05:30 [INF] ReviewService | End processing HTTP request after 53.8534ms - 200
+2026-06-25 11:56:46.705 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 11:56:50.125 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 11:56:50.916 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 11:56:51.134 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 11:56:51.139 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 11:56:51.144 +05:30 [INF] ReviewService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 11:57:18.686 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 11:57:22.909 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 11:57:23.936 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 11:57:24.116 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 11:57:24.153 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 11:57:24.156 +05:30 [INF] ReviewService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 12:19:01.689 +05:30 [INF] ReviewService | Start processing HTTP request PUT http://localhost:5002/api/hotels/3/rating
+2026-06-25 12:19:01.706 +05:30 [INF] ReviewService | Sending HTTP request PUT http://localhost:5002/api/hotels/3/rating
+2026-06-25 12:19:01.898 +05:30 [INF] ReviewService | Received HTTP response headers after 182.2267ms - 200
+2026-06-25 12:19:01.913 +05:30 [INF] ReviewService | End processing HTTP request after 230.7229ms - 200
+2026-06-25 20:53:38.598 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 20:53:38.923 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 20:53:50.299 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 20:53:50.604 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 20:55:02.830 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 20:55:04.924 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 20:55:06.148 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 20:55:06.317 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 20:55:06.573 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 20:55:06.576 +05:30 [INF] ReviewService | Content root path: C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService
+2026-06-25 22:32:09.168 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 22:32:09.515 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 22:32:18.441 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 22:32:18.734 +05:30 [FTL] ReviewService | Review Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService\Program.cs:line 101
+2026-06-25 22:36:41.546 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-25 22:36:43.705 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-25 22:36:44.319 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-25 22:36:44.474 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-25 22:36:44.490 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-25 22:36:44.563 +05:30 [INF] ReviewService | Content root path: C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\ReviewService

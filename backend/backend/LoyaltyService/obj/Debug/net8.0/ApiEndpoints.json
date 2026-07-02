@@ -1,0 +1,127 @@
+[
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "GetMyLoyaltyAccount",
+    "RelativePath": "api/Loyalty/account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "CreateLoyaltyAccount",
+    "RelativePath": "api/Loyalty/account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "GetUserLoyaltyAccount",
+    "RelativePath": "api/Loyalty/account/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "AddBonusPoints",
+    "RelativePath": "api/Loyalty/bonus/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "LoyaltyService.Controllers.AddBonusPointsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "CalculateDiscount",
+    "RelativePath": "api/Loyalty/calculate-discount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LoyaltyService.DTOs.CalculateDiscountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "EarnPoints",
+    "RelativePath": "api/Loyalty/earn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LoyaltyService.DTOs.EarnPointsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "GetPointHistory",
+    "RelativePath": "api/Loyalty/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "RedeemPoints",
+    "RelativePath": "api/Loyalty/redeem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LoyaltyService.DTOs.RedeemPointsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoyaltyService.Controllers.LoyaltyController",
+    "Method": "GetRedemptionHistory",
+    "RelativePath": "api/Loyalty/redemptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

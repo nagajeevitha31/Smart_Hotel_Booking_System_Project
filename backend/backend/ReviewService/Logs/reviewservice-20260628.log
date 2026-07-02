@@ -1,0 +1,34 @@
+2026-06-28 00:06:42.553 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-28 00:06:46.070 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-28 00:06:47.125 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-28 00:06:47.436 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-28 00:06:47.440 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-28 00:06:47.445 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\Downloads\backend\backend\ReviewService
+2026-06-28 23:27:23.551 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-28 23:27:25.134 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-28 23:27:26.043 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-28 23:27:26.236 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:27:26.353 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-28 23:27:26.354 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\ReviewService
+2026-06-28 23:43:50.045 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-28 23:43:52.095 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-28 23:43:52.594 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-28 23:43:52.735 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:43:52.746 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-28 23:43:52.776 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\ReviewService
+2026-06-28 23:46:24.071 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-28 23:46:25.510 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-28 23:46:27.177 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-28 23:46:27.555 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:46:27.620 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-28 23:46:27.628 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\ReviewService
+2026-06-28 23:53:34.272 +05:30 [INF] ReviewService | Starting Review Service...
+2026-06-28 23:53:35.691 +05:30 [INF] ReviewService | Review Service started successfully on port 5006
+2026-06-28 23:53:37.257 +05:30 [INF] ReviewService | Now listening on: http://localhost:5006
+2026-06-28 23:53:38.008 +05:30 [INF] ReviewService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:53:38.014 +05:30 [INF] ReviewService | Hosting environment: Development
+2026-06-28 23:53:38.018 +05:30 [INF] ReviewService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\ReviewService
+2026-06-28 23:54:13.719 +05:30 [INF] ReviewService | Start processing HTTP request PUT http://localhost:5002/api/hotels/3/rating
+2026-06-28 23:54:13.723 +05:30 [INF] ReviewService | Sending HTTP request PUT http://localhost:5002/api/hotels/3/rating
+2026-06-28 23:54:15.594 +05:30 [INF] ReviewService | Received HTTP response headers after 1868.0186ms - 200
+2026-06-28 23:54:15.600 +05:30 [INF] ReviewService | End processing HTTP request after 1884.8516ms - 200

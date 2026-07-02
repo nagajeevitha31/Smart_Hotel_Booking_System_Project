@@ -1,0 +1,144 @@
+<div class="glass-card h-full">
+  <h2 class="section-title mb-4">Register New Hotel</h2>
+  <form (ngSubmit)="onSubmit()" #addHotelForm="ngForm">
+    
+    <!-- Hotel Name Field -->
+    <div class="form-group mb-3">
+      <label class="form-label">Hotel Name</label>
+      <input type="text" name="hotelName" [(ngModel)]="formModel().name" required minlength="2" #hotelNameRef="ngModel" class="form-input" placeholder="The Grand Palace" />
+      
+      @if (hotelNameRef.touched && hotelNameRef.invalid) {
+        <span class="validation-error">
+          @if (hotelNameRef.errors?.['required']) {
+            <span>Hotel name is required.</span>
+          }
+          @if (hotelNameRef.errors?.['minlength']) {
+            <span>Hotel name must be at least 2 characters.</span>
+          }
+        </span>
+      }
+    </div>
+
+    <!-- Location & City -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Location Summary</label>
+        <input type="text" name="hotelLoc" [(ngModel)]="formModel().location" required minlength="2" #hotelLocRef="ngModel" class="form-input" placeholder="Goa, India" />
+        
+        @if (hotelLocRef.touched && hotelLocRef.invalid) {
+          <span class="validation-error">
+            @if (hotelLocRef.errors?.['required']) {
+              <span>Required.</span>
+            }
+          </span>
+        }
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">City</label>
+        <input type="text" name="hotelCity" [(ngModel)]="formModel().city" required #hotelCityRef="ngModel" class="form-input" placeholder="Panaji" />
+        
+        @if (hotelCityRef.touched && hotelCityRef.invalid) {
+          <span class="validation-error">
+            @if (hotelCityRef.errors?.['required']) {
+              <span>Required.</span>
+            }
+          </span>
+        }
+      </div>
+    </div>
+
+    <!-- Street Address Field -->
+    <div class="form-group mb-3">
+      <label class="form-label">Street Address</label>
+      <input type="text" name="hotelAddress" [(ngModel)]="formModel().address" required #hotelAddressRef="ngModel" class="form-input" placeholder="123 Beachside Road" />
+      
+      @if (hotelAddressRef.touched && hotelAddressRef.invalid) {
+        <span class="validation-error">
+          @if (hotelAddressRef.errors?.['required']) {
+            <span>Street address is required.</span>
+          }
+        </span>
+      }
+    </div>
+
+    <!-- State, Country & Zip Code Triple Grid -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">State</label>
+        <input type="text" name="hotelState" [(ngModel)]="formModel().state" required #hotelStateRef="ngModel" class="form-input" placeholder="Goa" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Country</label>
+        <input type="text" name="hotelCountry" [(ngModel)]="formModel().country" required #hotelCountryRef="ngModel" class="form-input" placeholder="India" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Zip Code</label>
+        <input type="text" name="hotelZip" [(ngModel)]="formModel().zipCode" required #hotelZipRef="ngModel" class="form-input" placeholder="403001" />
+      </div>
+    </div>
+
+    <!-- Contact Number & Email Address Grid -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Contact Number</label>
+        <input type="text" name="hotelContact" [(ngModel)]="formModel().contactNumber" class="form-input" placeholder="+91 98765..." />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="hotelEmail" [(ngModel)]="formModel().email" class="form-input" placeholder="hotel@domain.com" />
+      </div>
+    </div>
+
+    <!-- Banner Image URL Link Field -->
+    <div class="form-group mb-3">
+      <label class="form-label">Hotel Cover Image URL</label>
+      <input type="text" name="hotelImageUrl" [(ngModel)]="formModel().imageUrl" class="form-input" placeholder="https://images.unsplash.com/photo-..." />
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="hotelDesc" [(ngModel)]="formModel().description" required minlength="10" #hotelDescRef="ngModel" rows="2" class="form-input" placeholder="A luxurious beachfront resort..."></textarea>
+      
+      @if (hotelDescRef.touched && hotelDescRef.invalid) {
+        <span class="validation-error">
+          @if (hotelDescRef.errors?.['required']) {
+            <span>Description is required.</span>
+          }
+          @if (hotelDescRef.errors?.['minlength']) {
+            <span>Must be at least 10 characters.</span>
+          }
+        </span>
+      }
+    </div>
+
+    <!-- Dynamic Checkbox Grid System for Hotel Amenities -->
+    <div class="form-group mb-3">
+      <label class="form-label" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Hotel Amenities</label>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; max-height: 120px; overflow-y: auto; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: var(--border-radius-md);">
+        @for (amenity of amenitiesList(); track amenity.amenityId) {
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.9rem;">
+            <input 
+              type="checkbox" 
+              [checked]="formModel().amenityIds?.includes(amenity.amenityId)"
+              (change)="onAmenityToggle(amenity.amenityId)"
+              style="width: 1.1rem; height: 1.1rem; accent-color: var(--accent-indigo);" 
+            />
+            {{ amenity.name || amenity.amenityName }}
+          </label>
+        } @empty {
+          <p style="color: var(--text-muted); font-size: 0.85rem; padding: 0.25rem;">No hotel amenities found.</p>
+        }
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="addHotelForm.invalid || submitting()" class="btn btn-primary w-full mt-2">
+      @if (submitting()) {
+        <span class="loader"></span>
+      } @else {
+        Create Hotel
+      }
+    </button>
+  </form>
+</div>

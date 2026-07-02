@@ -1,0 +1,18 @@
+2026-06-27 23:13:20.891 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-27 23:13:23.999 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-27 23:13:24.856 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-27 23:13:25.010 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:13:25.013 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-27 23:13:25.017 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\Downloads\backend\backend\RoomService
+2026-06-27 23:49:05.569 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-27 23:49:08.022 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-27 23:49:09.179 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-27 23:49:09.825 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:49:10.011 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-27 23:49:10.084 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\Downloads\backend\backend\RoomService
+2026-06-27 23:56:02.186 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-27 23:56:04.095 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-27 23:56:05.058 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-27 23:56:05.560 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:56:05.621 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-27 23:56:05.674 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\Downloads\backend\backend\RoomService

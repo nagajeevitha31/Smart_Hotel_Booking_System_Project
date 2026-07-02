@@ -1,0 +1,54 @@
+2026-06-27 23:13:22.543 +05:30 [INF] BookingService | Starting Booking Service...
+2026-06-27 23:13:25.452 +05:30 [INF] BookingService | Booking Service started successfully on port 5004
+2026-06-27 23:13:26.957 +05:30 [INF] BookingService | Now listening on: http://localhost:5004
+2026-06-27 23:13:27.376 +05:30 [INF] BookingService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:13:27.412 +05:30 [INF] BookingService | Hosting environment: Development
+2026-06-27 23:13:27.422 +05:30 [INF] BookingService | Content root path: C:\Users\2492194\Downloads\backend\backend\BookingService
+2026-06-27 23:22:43.518 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5003/api/rooms/7
+2026-06-27 23:22:43.531 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5003/api/rooms/7
+2026-06-27 23:22:43.697 +05:30 [INF] BookingService | Received HTTP response headers after 160.3612ms - 200
+2026-06-27 23:22:43.717 +05:30 [INF] BookingService | End processing HTTP request after 207.2272ms - 200
+2026-06-27 23:22:43.731 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5002/api/hotels/2
+2026-06-27 23:22:43.734 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5002/api/hotels/2
+2026-06-27 23:22:43.777 +05:30 [INF] BookingService | Received HTTP response headers after 40.0265ms - 200
+2026-06-27 23:22:43.781 +05:30 [INF] BookingService | End processing HTTP request after 50.3902ms - 200
+2026-06-27 23:22:44.249 +05:30 [INF] BookingService | Start processing HTTP request PUT http://localhost:5003/api/rooms/7/availability
+2026-06-27 23:22:44.256 +05:30 [INF] BookingService | Sending HTTP request PUT http://localhost:5003/api/rooms/7/availability
+2026-06-27 23:22:44.298 +05:30 [INF] BookingService | Received HTTP response headers after 38.8615ms - 401
+2026-06-27 23:22:44.303 +05:30 [INF] BookingService | End processing HTTP request after 53.9781ms - 401
+2026-06-27 23:33:08.668 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5003/api/rooms/6
+2026-06-27 23:33:08.674 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5003/api/rooms/6
+2026-06-27 23:33:08.718 +05:30 [INF] BookingService | Received HTTP response headers after 39.3177ms - 200
+2026-06-27 23:33:08.723 +05:30 [INF] BookingService | End processing HTTP request after 55.1609ms - 200
+2026-06-27 23:33:08.730 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5002/api/hotels/5
+2026-06-27 23:33:08.733 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5002/api/hotels/5
+2026-06-27 23:33:08.761 +05:30 [INF] BookingService | Received HTTP response headers after 22.9553ms - 200
+2026-06-27 23:33:08.765 +05:30 [INF] BookingService | End processing HTTP request after 34.9645ms - 200
+2026-06-27 23:33:08.791 +05:30 [INF] BookingService | Start processing HTTP request PUT http://localhost:5003/api/rooms/6/availability
+2026-06-27 23:33:08.796 +05:30 [INF] BookingService | Sending HTTP request PUT http://localhost:5003/api/rooms/6/availability
+2026-06-27 23:33:08.805 +05:30 [INF] BookingService | Received HTTP response headers after 5.9552ms - 401
+2026-06-27 23:33:08.809 +05:30 [INF] BookingService | End processing HTTP request after 18.6322ms - 401
+2026-06-27 23:49:05.085 +05:30 [INF] BookingService | Starting Booking Service...
+2026-06-27 23:49:07.296 +05:30 [INF] BookingService | Booking Service started successfully on port 5004
+2026-06-27 23:49:07.976 +05:30 [INF] BookingService | Now listening on: http://localhost:5004
+2026-06-27 23:49:08.200 +05:30 [INF] BookingService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:49:08.291 +05:30 [INF] BookingService | Hosting environment: Development
+2026-06-27 23:49:08.330 +05:30 [INF] BookingService | Content root path: C:\Users\2492194\Downloads\backend\backend\BookingService
+2026-06-27 23:50:47.820 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5003/api/rooms/3
+2026-06-27 23:50:47.830 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5003/api/rooms/3
+2026-06-27 23:50:47.960 +05:30 [INF] BookingService | Received HTTP response headers after 123.8508ms - 200
+2026-06-27 23:50:47.969 +05:30 [INF] BookingService | End processing HTTP request after 154.4684ms - 200
+2026-06-27 23:50:47.979 +05:30 [INF] BookingService | Start processing HTTP request GET http://localhost:5002/api/hotels/3
+2026-06-27 23:50:47.983 +05:30 [INF] BookingService | Sending HTTP request GET http://localhost:5002/api/hotels/3
+2026-06-27 23:50:48.030 +05:30 [INF] BookingService | Received HTTP response headers after 42.5555ms - 200
+2026-06-27 23:50:48.034 +05:30 [INF] BookingService | End processing HTTP request after 54.3695ms - 200
+2026-06-27 23:50:48.383 +05:30 [INF] BookingService | Start processing HTTP request PUT http://localhost:5003/api/rooms/3/availability
+2026-06-27 23:50:48.389 +05:30 [INF] BookingService | Sending HTTP request PUT http://localhost:5003/api/rooms/3/availability
+2026-06-27 23:50:48.422 +05:30 [INF] BookingService | Received HTTP response headers after 27.6283ms - 401
+2026-06-27 23:50:48.428 +05:30 [INF] BookingService | End processing HTTP request after 45.1173ms - 401
+2026-06-27 23:56:00.922 +05:30 [INF] BookingService | Starting Booking Service...
+2026-06-27 23:56:02.928 +05:30 [INF] BookingService | Booking Service started successfully on port 5004
+2026-06-27 23:56:03.544 +05:30 [INF] BookingService | Now listening on: http://localhost:5004
+2026-06-27 23:56:03.716 +05:30 [INF] BookingService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:56:03.721 +05:30 [INF] BookingService | Hosting environment: Development
+2026-06-27 23:56:03.727 +05:30 [INF] BookingService | Content root path: C:\Users\2492194\Downloads\backend\backend\BookingService

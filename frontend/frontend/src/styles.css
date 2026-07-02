@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+ 
+:root {
+  /* 1st CSS: Smooth ambient backgrounds & premium values */
+  --bg-app: #f4f6fa;
+  --bg-surface: #ffffff;
+  --bg-card: rgba(248, 250, 252, 0.9);
+  --bg-card-hover: rgba(241, 245, 249, 1);
+ 
+  /* 2nd CSS: High-contrast sharp text tokens */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+ 
+  --accent-indigo: #6366f1;
+  --accent-blue: #2563eb;
+  --accent-gradient: linear-gradient(135deg, #5b3309 0%, #5b3309 100%);
+ 
+  --color-success: #16a34a;
+  --color-success-bg: rgba(22, 163, 74, 0.08);
+  --color-warning: #d97706;
+  --color-warning-bg: rgba(217, 119, 6, 0.08);
+  --color-danger: #dc2626;
+  --color-danger-bg: rgba(220, 38, 38, 0.08);
+  --color-info: #0284c7;
+  --color-info-bg: rgba(2, 132, 199, 0.08);
+ 
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-color-hover: rgba(15, 23, 42, 0.16);
+ 
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.15);
+ 
+  /* 1st CSS: Font Family pairs & Border Radii styling */
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-title: 'Outfit', sans-serif;
+ 
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 18px;
+}
+ 
+/* ============================= */
+/* Reset + Base */
+/* ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-sans);
+}
+ 
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+ 
+/* ============================= */
+/* Scrollbar */
+/* ============================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color-hover);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-indigo);
+}
+ 
+/* ============================= */
+/* Typography (2nd CSS Size Scales + 1st CSS Fonts) */
+/* ============================= */
+h1 {
+  font-family: var(--font-family-title);
+  font-size: 1.75rem; 
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* 🎯 FIXED: Preserves native block styling so names like "Hotel Taj" don't disappear */
+h2, h3, [class*="title"] {
+  font-family: var(--font-family-title);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+p, span, label, div, td {
+  font-size: 0.875rem; 
+}
+ 
+/* ============================= */
+/* Outer Shell Container Radius Fix */
+/* ============================= */
+/* Ensures the outer dashboard sections have your gorgeous 1st CSS premium curved edges */
+.container-fluid,
+div[class*="-container"],
+section,
+main {
+  border-radius: var(--border-radius-lg);
+}
+
+/* ============================= */
+/* Glass Card (Merged Layout) */
+/* ============================= */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg); /* Beautiful 18px rounded corners */
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+ 
+.glass-card:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+ 
+/* ============================= */
+/* Buttons (1st CSS Look + 2nd CSS Tight Padding) */
+/* ============================= */
+button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-family-title);
+  font-weight: 600;
+  font-size: 0.875rem;                   /* Clean compact typography sizing */
+  padding: 0.5rem 1.25rem;               /* Tight professional dashboard padding */
+  border-radius: var(--border-radius-md);/* 12px smooth curves */
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+ 
+.btn-primary, button[type="submit"] {
+  background: #657fb7;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(101, 127, 183, 0.2);
+}
+ 
+.btn-primary:hover, button[type="submit"]:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+ 
+.btn-secondary {
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+ 
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
+ 
+.btn-danger {
+  background: var(--color-danger);
+  color: white;
+}
+ 
+.btn-danger:hover {
+  background: #dc2626;
+}
+ 
+/* ============================= */
+/* Forms (1st CSS Look + 2nd CSS Sizing) */
+/* ============================= */
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+ 
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+ 
+.form-input, select, textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;               /* 2nd CSS tight styling input scale */
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);/* Beautiful 12px input corners */
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+ 
+.form-input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-indigo);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+ 
+/* Angular Validation Controls */
+.form-input.ng-invalid.ng-touched {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+ 
+.form-input.ng-valid.ng-touched {
+  border-color: var(--color-success);
+}
+ 
+.validation-error {
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+ 
+/* ============================= */
+/* Badges */
+/* ============================= */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+ 
+.badge-success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+.badge-danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+.badge-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+.badge-info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+ 
+/* ============================= */
+/* Layout & Structural Grid */
+/* ============================= */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+ 
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+ 
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+ 
+@media (max-width: 768px) {
+  .grid-cols-2, .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}

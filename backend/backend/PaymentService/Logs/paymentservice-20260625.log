@@ -1,0 +1,295 @@
+2026-06-25 10:27:34.804 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 10:27:39.748 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 10:27:40.529 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 10:27:40.841 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:27:40.923 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 10:27:41.117 +05:30 [INF] PaymentService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 10:31:30.354 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 10:31:33.700 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 10:31:34.261 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 10:31:34.716 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:31:34.719 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 10:31:34.722 +05:30 [INF] PaymentService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 10:32:28.043 +05:30 [ERR] PaymentService | Failed executing DbCommand (91ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[PaymentId], [m].[Amount], [m].[BookingId], [m].[CardHolderName], [m].[CardLastFourDigits], [m].[CreatedAt], [m].[Currency], [m].[Description], [m].[DiscountAmount], [m].[PaymentDate], [m].[PaymentMethod], [m].[PointsToRedeem], [m].[RefundAmount], [m].[RefundDate], [m].[RefundReason], [m].[Status], [m].[TransactionId], [m].[UpdatedAt], [m].[UserId]
+FROM [MyPayments] AS [m]
+WHERE [m].[UserId] = @__userId_0
+ORDER BY [m].[CreatedAt] DESC
+2026-06-25 10:32:28.121 +05:30 [ERR] PaymentService | An exception occurred while iterating over the results of a query for context type 'PaymentService.Data.PaymentDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+2026-06-25 10:32:28.369 +05:30 [ERR] PaymentService | An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at PaymentService.Services.PaymentProcessingService.GetUserPaymentsAsync(Int32 userId) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Services\PaymentProcessingService.cs:line 153
+   at PaymentService.Controllers.PaymentsController.GetMyPayments() in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Controllers\PaymentsController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+2026-06-25 10:37:32.528 +05:30 [ERR] PaymentService | Failed executing DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[PaymentId], [m].[Amount], [m].[BookingId], [m].[CardHolderName], [m].[CardLastFourDigits], [m].[CreatedAt], [m].[Currency], [m].[Description], [m].[DiscountAmount], [m].[PaymentDate], [m].[PaymentMethod], [m].[PointsToRedeem], [m].[RefundAmount], [m].[RefundDate], [m].[RefundReason], [m].[Status], [m].[TransactionId], [m].[UpdatedAt], [m].[UserId]
+FROM [MyPayments] AS [m]
+WHERE [m].[UserId] = @__userId_0
+ORDER BY [m].[CreatedAt] DESC
+2026-06-25 10:37:32.539 +05:30 [ERR] PaymentService | An exception occurred while iterating over the results of a query for context type 'PaymentService.Data.PaymentDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+2026-06-25 10:37:32.672 +05:30 [ERR] PaymentService | An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DiscountAmount'.
+Invalid column name 'PointsToRedeem'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at PaymentService.Services.PaymentProcessingService.GetUserPaymentsAsync(Int32 userId) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Services\PaymentProcessingService.cs:line 153
+   at PaymentService.Controllers.PaymentsController.GetMyPayments() in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Controllers\PaymentsController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:601aedf2-bd74-4f3e-bc28-5a3b8a7e74d8
+Error Number:207,State:1,Class:16
+2026-06-25 10:45:32.167 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 10:45:32.453 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 10:45:38.678 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 10:45:38.938 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 10:57:45.110 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 10:57:48.870 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 10:57:50.600 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 10:57:52.150 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 10:57:52.578 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 10:57:52.600 +05:30 [INF] PaymentService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 10:59:30.543 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/1/payment
+2026-06-25 10:59:30.552 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/1/payment
+2026-06-25 10:59:30.716 +05:30 [INF] PaymentService | Received HTTP response headers after 157.8004ms - 200
+2026-06-25 10:59:30.729 +05:30 [INF] PaymentService | End processing HTTP request after 192.0642ms - 200
+2026-06-25 10:59:30.746 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 10:59:30.749 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 10:59:30.966 +05:30 [INF] PaymentService | Received HTTP response headers after 213.1511ms - 200
+2026-06-25 10:59:30.970 +05:30 [INF] PaymentService | End processing HTTP request after 224.1026ms - 200
+2026-06-25 10:59:30.975 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 1 with amount 4000.00
+2026-06-25 11:03:12.253 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/2/payment
+2026-06-25 11:03:12.257 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/2/payment
+2026-06-25 11:03:12.320 +05:30 [INF] PaymentService | Received HTTP response headers after 60.3225ms - 200
+2026-06-25 11:03:12.324 +05:30 [INF] PaymentService | End processing HTTP request after 70.7218ms - 200
+2026-06-25 11:03:12.333 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/redeem
+2026-06-25 11:03:12.335 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/redeem
+2026-06-25 11:03:12.475 +05:30 [INF] PaymentService | Received HTTP response headers after 137.1226ms - 200
+2026-06-25 11:03:12.478 +05:30 [INF] PaymentService | End processing HTTP request after 145.0364ms - 200
+2026-06-25 11:03:12.484 +05:30 [INF] PaymentService | Successfully redeemed 40000 points for booking 2
+2026-06-25 11:03:12.487 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 11:03:12.490 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 11:03:12.525 +05:30 [INF] PaymentService | Received HTTP response headers after 31.8987ms - 200
+2026-06-25 11:03:12.527 +05:30 [INF] PaymentService | End processing HTTP request after 40.099ms - 200
+2026-06-25 11:03:12.529 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 2 with amount 1800.00
+2026-06-25 11:56:47.322 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 11:56:50.801 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 11:56:51.716 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 11:56:53.460 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 11:56:53.501 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 11:56:53.507 +05:30 [INF] PaymentService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 11:57:18.896 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 11:57:23.080 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 11:57:24.484 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 11:57:24.933 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 11:57:25.358 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 11:57:25.399 +05:30 [INF] PaymentService | Content root path: C:\Users\2492313\Downloads\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 12:18:08.345 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/3/payment
+2026-06-25 12:18:08.358 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/3/payment
+2026-06-25 12:18:08.501 +05:30 [INF] PaymentService | Received HTTP response headers after 132.9586ms - 200
+2026-06-25 12:18:08.516 +05:30 [INF] PaymentService | End processing HTTP request after 177.9548ms - 200
+2026-06-25 12:18:08.530 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/redeem
+2026-06-25 12:18:08.535 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/redeem
+2026-06-25 12:18:08.773 +05:30 [INF] PaymentService | Received HTTP response headers after 233.5833ms - 200
+2026-06-25 12:18:08.779 +05:30 [INF] PaymentService | End processing HTTP request after 248.7929ms - 200
+2026-06-25 12:18:08.786 +05:30 [INF] PaymentService | Successfully redeemed 18000 points for booking 3
+2026-06-25 12:18:08.795 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 12:18:08.800 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-25 12:18:08.849 +05:30 [INF] PaymentService | Received HTTP response headers after 45.3351ms - 200
+2026-06-25 12:18:08.854 +05:30 [INF] PaymentService | End processing HTTP request after 59.7486ms - 200
+2026-06-25 12:18:08.859 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 3 with amount 4820.00
+2026-06-25 20:53:11.347 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 20:53:11.703 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 20:53:20.922 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 20:53:21.334 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 20:55:02.823 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 20:55:04.923 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 20:55:06.138 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 20:55:06.286 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 20:55:06.321 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 20:55:06.346 +05:30 [INF] PaymentService | Content root path: C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService
+2026-06-25 22:31:41.585 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 22:31:41.889 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 22:31:50.200 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 22:31:50.489 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 22:31:59.867 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 22:32:00.179 +05:30 [FTL] PaymentService | Payment Service failed to start
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService\Program.cs:line 103
+2026-06-25 22:36:41.615 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-25 22:36:43.538 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-25 22:36:44.150 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-25 22:36:44.312 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-25 22:36:44.331 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-25 22:36:44.364 +05:30 [INF] PaymentService | Content root path: C:\Users\2492212\OneDrive - Cognizant\Desktop\qwerty\Sruthi_frontend\updated-UI-main\backend\PaymentService

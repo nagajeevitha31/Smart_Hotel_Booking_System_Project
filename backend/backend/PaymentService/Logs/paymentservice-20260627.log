@@ -1,0 +1,54 @@
+2026-06-27 23:13:20.728 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-27 23:13:23.681 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-27 23:13:24.491 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-27 23:13:24.645 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:13:24.651 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-27 23:13:24.653 +05:30 [INF] PaymentService | Content root path: C:\Users\2492194\Downloads\backend\backend\PaymentService
+2026-06-27 23:23:13.542 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/3/payment
+2026-06-27 23:23:13.554 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/3/payment
+2026-06-27 23:23:13.726 +05:30 [INF] PaymentService | Received HTTP response headers after 167.0151ms - 200
+2026-06-27 23:23:13.739 +05:30 [INF] PaymentService | End processing HTTP request after 203.2453ms - 200
+2026-06-27 23:23:13.750 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:23:13.752 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:23:13.965 +05:30 [INF] PaymentService | Received HTTP response headers after 209.6008ms - 200
+2026-06-27 23:23:13.969 +05:30 [INF] PaymentService | End processing HTTP request after 219.4298ms - 200
+2026-06-27 23:23:13.972 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 3 with amount 3400.00
+2026-06-27 23:33:32.749 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/4/payment
+2026-06-27 23:33:32.751 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/4/payment
+2026-06-27 23:33:32.780 +05:30 [INF] PaymentService | Received HTTP response headers after 28.1014ms - 200
+2026-06-27 23:33:32.782 +05:30 [INF] PaymentService | End processing HTTP request after 33.0918ms - 200
+2026-06-27 23:33:32.785 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:33:32.789 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:33:32.824 +05:30 [INF] PaymentService | Received HTTP response headers after 31.6669ms - 200
+2026-06-27 23:33:32.826 +05:30 [INF] PaymentService | End processing HTTP request after 40.5932ms - 200
+2026-06-27 23:33:32.828 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 4 with amount 5100.00
+2026-06-27 23:49:05.551 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-27 23:49:07.835 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-27 23:49:08.727 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-27 23:49:08.980 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:49:08.986 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-27 23:49:08.993 +05:30 [INF] PaymentService | Content root path: C:\Users\2492194\Downloads\backend\backend\PaymentService
+2026-06-27 23:51:12.140 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/5/payment
+2026-06-27 23:51:12.156 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/5/payment
+2026-06-27 23:51:12.218 +05:30 [INF] PaymentService | Received HTTP response headers after 46.1024ms - 404
+2026-06-27 23:51:12.237 +05:30 [INF] PaymentService | End processing HTTP request after 106.7143ms - 404
+2026-06-27 23:51:12.257 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:51:12.264 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:51:12.836 +05:30 [INF] PaymentService | Received HTTP response headers after 565.539ms - 200
+2026-06-27 23:51:12.846 +05:30 [INF] PaymentService | End processing HTTP request after 589.2388ms - 200
+2026-06-27 23:51:12.857 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 5 with amount 5500.00
+2026-06-27 23:56:02.072 +05:30 [INF] PaymentService | Starting Payment Service...
+2026-06-27 23:56:04.111 +05:30 [INF] PaymentService | Payment Service started successfully on port 5005
+2026-06-27 23:56:05.273 +05:30 [INF] PaymentService | Now listening on: http://localhost:5005
+2026-06-27 23:56:05.607 +05:30 [INF] PaymentService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:56:08.722 +05:30 [INF] PaymentService | Hosting environment: Development
+2026-06-27 23:56:09.507 +05:30 [INF] PaymentService | Content root path: C:\Users\2492194\Downloads\backend\backend\PaymentService
+2026-06-27 23:57:22.601 +05:30 [INF] PaymentService | Start processing HTTP request PUT http://localhost:5004/api/bookings/2/payment
+2026-06-27 23:57:22.615 +05:30 [INF] PaymentService | Sending HTTP request PUT http://localhost:5004/api/bookings/2/payment
+2026-06-27 23:57:22.668 +05:30 [INF] PaymentService | Received HTTP response headers after 42.3638ms - 404
+2026-06-27 23:57:22.685 +05:30 [INF] PaymentService | End processing HTTP request after 93.9954ms - 404
+2026-06-27 23:57:22.703 +05:30 [INF] PaymentService | Start processing HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:57:22.709 +05:30 [INF] PaymentService | Sending HTTP request POST http://localhost:5007/api/loyalty/earn
+2026-06-27 23:57:23.683 +05:30 [INF] PaymentService | Received HTTP response headers after 968.3875ms - 200
+2026-06-27 23:57:23.690 +05:30 [INF] PaymentService | End processing HTTP request after 987.7619ms - 200
+2026-06-27 23:57:23.701 +05:30 [INF] PaymentService | Successfully earned loyalty points for booking 2 with amount 3400.00

@@ -1,0 +1,45 @@
+<nav class="navbar animate-fade-in">
+  <div class="nav-container">
+    <a routerLink="/" class="nav-logo">
+      <span class="logo-icon"></span>
+      <span class="logo-text">SmartHotel</span>
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Hotels</a>
+      @if (auth.isLoggedIn()) {
+        <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">My Dashboard</a>
+      }
+      @if (auth.isManager()) {
+        <a routerLink="/admin" routerLinkActive="active" class="nav-link">Management</a>
+      }
+    </div>
+
+    <div class="nav-actions">
+      <!-- Light/Dark Mode Toggle
+      <button (click)="toggleTheme()" class="theme-toggle-btn" aria-label="Toggle theme">
+        @if (isLightTheme()) {
+          <span>🌙</span>
+        } @else {
+          <span>☀️</span>
+        }
+      </button> -->
+
+      <!-- User Section -->
+      @if (auth.isLoggedIn()) {
+        <div class="user-profile">
+          <div class="avatar">{{ getInitials() }}</div>
+          <div class="user-info">
+            <span class="user-name">{{ auth.currentUser()?.name }}</span>
+            <span class="user-role badge" [ngClass]="getRoleClass()">{{ auth.currentUser()?.role }}</span>
+          </div>
+          <button (click)="logout()" class="btn-logout" title="Sign Out">
+            🚪logout
+          </button>
+        </div>
+      } @else {
+        <a routerLink="/auth" class="btn btn-primary">Sign In / Register</a>
+      }
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,57 @@
+<form (ngSubmit)="onSubmit()" class="review-form" #reviewFormRef="ngForm">
+  <div class="rating-selector mb-3">
+    <label class="form-label block mb-1">Rating</label>
+    <div class="stars-row">
+      @for (star of [1, 2, 3, 4, 5]; track star) {
+        <span 
+          (click)="setRating(star)" 
+          class="star-clickable" 
+          [ngClass]="{'active': star <= rating()}">
+          ★
+        </span>
+      }
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label class="form-label">Review Title</label>
+    <input 
+      type="text" 
+      name="title" 
+      [(ngModel)]="reviewForm.title" 
+      required 
+      minlength="3"
+      #titleRef="ngModel"
+      class="form-input" 
+      placeholder="Summarize your stay" />
+    <span class="validation-error" *ngIf="titleRef.touched && titleRef.invalid">
+      <span *ngIf="titleRef.errors?.['required']">Title is required.</span>
+      <span *ngIf="titleRef.errors?.['minlength']">Title must be at least 3 characters.</span>
+    </span>
+  </div>
+
+  <div class="form-group mb-3">
+    <label class="form-label">Detailed Experience</label>
+    <textarea 
+      name="comment" 
+      [(ngModel)]="reviewForm.comment" 
+      required 
+      minlength="10"
+      #commentRef="ngModel"
+      rows="4" 
+      class="form-input" 
+      placeholder="How was the service, food, and room comfort?"></textarea>
+    <span class="validation-error" *ngIf="commentRef.touched && commentRef.invalid">
+      <span *ngIf="commentRef.errors?.['required']">Comment is required.</span>
+      <span *ngIf="commentRef.errors?.['minlength']">Comment must be at least 10 characters.</span>
+    </span>
+  </div>
+
+  <button type="submit" [disabled]="reviewFormRef.invalid || submitting()" class="btn btn-primary w-full mt-2">
+    @if (submitting()) {
+      <span class="loader"></span>
+    } @else {
+      Submit Review
+    }
+  </button>
+</form>

@@ -1,0 +1,117 @@
+<div class="glass-card h-full">
+  <h2 class="section-title mb-4">Add New Room</h2>
+  <form (ngSubmit)="onSubmit()" #addRoomForm="ngForm">
+    
+    <!-- Select Hotel -->
+    <div class="form-group mb-3">
+      <label class="form-label">Select Hotel</label>
+      <select name="roomHotelId" [(ngModel)]="formModel().hotelId" required #roomHotelRef="ngModel" class="form-input">
+        <option [value]="0" disabled>-- Choose a Hotel --</option>
+        @for (hotel of hotels(); track hotel.hotelId) {
+          <option [value]="hotel.hotelId">{{ hotel.name }} ({{ hotel.location }})</option>
+        }
+      </select>
+      <span class="validation-error" *ngIf="roomHotelRef.touched && formModel().hotelId === 0">
+        Please select a valid destination hotel.
+      </span>
+    </div>
+
+    <!-- Room Number & Room Type (Split Grid) -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Room Number</label>
+        <input type="text" name="roomNumber" [(ngModel)]="formModel().roomNumber" required #roomNumRef="ngModel" class="form-input" placeholder="e.g. 101, 204B" />
+        <span class="validation-error" *ngIf="roomNumRef.touched && roomNumRef.invalid">Required.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Room Type</label>
+        <select name="roomType" [(ngModel)]="formModel().roomType" class="form-input">
+          <option value="Single Room">Single Room</option>
+          <option value="Double Room">Double Room</option>
+          <option value="Deluxe Suite">Deluxe Suite</option>
+          <option value="Executive Suite">Executive Suite</option>
+          <option value="Presidential Suite">Presidential Suite</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Price Per Night & Room Size (Split Grid) -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Price Per Night (₹)</label>
+        <input type="number" name="pricePerNight" [(ngModel)]="formModel().pricePerNight" required min="1" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Room Size (Sq. Ft.)</label>
+        <input type="number" name="roomSize" [(ngModel)]="formModel().roomSize" required min="1" class="form-input" placeholder="250" />
+      </div>
+    </div>
+
+    <!-- Bed Configuration & Floor Number Grid -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Max Occupancy</label>
+        <input type="number" name="maxOccupancy" [(ngModel)]="formModel().maxOccupancy" required min="1" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Bed Count</label>
+        <input type="number" name="bedCount" [(ngModel)]="formModel().bedCount" required min="1" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Floor Number</label>
+        <input type="number" name="floorNumber" [(ngModel)]="formModel().floorNumber" required class="form-input" />
+      </div>
+    </div>
+
+    <!-- Bed Type & Image URL Field -->
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 0.75rem;" class="mb-3">
+      <div class="form-group">
+        <label class="form-label">Bed Type</label>
+        <select name="bedType" [(ngModel)]="formModel().bedType" class="form-input">
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Queen">Queen</option>
+          <option value="King">King</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Room Image URL</label>
+        <input type="text" name="roomImageUrl" [(ngModel)]="formModel().imageUrl" class="form-input" placeholder="https://images.unsplash.com/..." />
+      </div>
+    </div>
+
+    <!-- Description Textarea Box -->
+    <div class="form-group mb-3">
+      <label class="form-label">Room Description</label>
+      <textarea name="roomDesc" [(ngModel)]="formModel().description" rows="2" class="form-input" placeholder="Enter standard room view inclusions, balcony specs..."></textarea>
+    </div>
+
+    <!-- Dynamic Checkbox Grid System for Room Amenities -->
+    <div class="form-group mb-3">
+      <label class="form-label" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Room Amenities</label>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; max-height: 120px; overflow-y: auto; padding: 0.6rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--border-radius-md);">
+        @for (amenity of amenitiesList(); track amenity.amenityId) {
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.9rem;">
+            <input 
+              type="checkbox" 
+              [checked]="formModel().amenityIds?.includes(amenity.amenityId)"
+              (change)="onAmenityToggle(amenity.amenityId)"
+              style="width: 1.1rem; height: 1.1rem; accent-color: var(--accent-indigo);" 
+            />
+            {{ amenity.name || amenity.amenityName }}
+          </label>
+        } @empty {
+          <p style="color: var(--text-muted); font-size: 0.85rem; padding: 0.25rem;">No room amenities found.</p>
+        }
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="addRoomForm.invalid || formModel().hotelId === 0 || submitting()" class="btn btn-primary w-full mt-2">
+      @if (submitting()) {
+        <span class="loader"></span>
+      } @else {
+        Add Room
+      }
+    </button>
+  </form>
+</div>

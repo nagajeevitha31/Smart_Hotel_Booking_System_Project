@@ -1,0 +1,18 @@
+2026-06-27 23:13:20.841 +05:30 [INF] LoyaltyService | Starting Loyalty Service...
+2026-06-27 23:13:23.630 +05:30 [INF] LoyaltyService | Loyalty Service started successfully on port 5007
+2026-06-27 23:13:24.570 +05:30 [INF] LoyaltyService | Now listening on: http://localhost:5007
+2026-06-27 23:13:24.725 +05:30 [INF] LoyaltyService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:13:24.795 +05:30 [INF] LoyaltyService | Hosting environment: Development
+2026-06-27 23:13:24.805 +05:30 [INF] LoyaltyService | Content root path: C:\Users\2492194\Downloads\backend\backend\LoyaltyService
+2026-06-27 23:49:05.378 +05:30 [INF] LoyaltyService | Starting Loyalty Service...
+2026-06-27 23:49:07.831 +05:30 [INF] LoyaltyService | Loyalty Service started successfully on port 5007
+2026-06-27 23:49:08.678 +05:30 [INF] LoyaltyService | Now listening on: http://localhost:5007
+2026-06-27 23:49:09.040 +05:30 [INF] LoyaltyService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:49:09.138 +05:30 [INF] LoyaltyService | Hosting environment: Development
+2026-06-27 23:49:09.184 +05:30 [INF] LoyaltyService | Content root path: C:\Users\2492194\Downloads\backend\backend\LoyaltyService
+2026-06-27 23:56:01.758 +05:30 [INF] LoyaltyService | Starting Loyalty Service...
+2026-06-27 23:56:03.722 +05:30 [INF] LoyaltyService | Loyalty Service started successfully on port 5007
+2026-06-27 23:56:04.377 +05:30 [INF] LoyaltyService | Now listening on: http://localhost:5007
+2026-06-27 23:56:04.796 +05:30 [INF] LoyaltyService | Application started. Press Ctrl+C to shut down.
+2026-06-27 23:56:04.862 +05:30 [INF] LoyaltyService | Hosting environment: Development
+2026-06-27 23:56:04.866 +05:30 [INF] LoyaltyService | Content root path: C:\Users\2492194\Downloads\backend\backend\LoyaltyService

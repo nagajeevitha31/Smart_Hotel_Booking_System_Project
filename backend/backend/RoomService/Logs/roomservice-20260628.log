@@ -1,0 +1,30 @@
+2026-06-28 00:06:43.095 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-28 00:06:46.522 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-28 00:06:47.588 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-28 00:06:47.962 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-28 00:06:48.029 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-28 00:06:48.046 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\Downloads\backend\backend\RoomService
+2026-06-28 23:27:23.898 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-28 23:27:25.302 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-28 23:27:26.196 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-28 23:27:26.467 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:27:26.569 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-28 23:27:26.578 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\RoomService
+2026-06-28 23:43:50.369 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-28 23:43:52.053 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-28 23:43:52.594 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-28 23:43:52.753 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:43:52.842 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-28 23:43:52.849 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\RoomService
+2026-06-28 23:46:23.955 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-28 23:46:25.174 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-28 23:46:25.725 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-28 23:46:25.857 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:46:25.884 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-28 23:46:25.888 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\RoomService
+2026-06-28 23:53:34.276 +05:30 [INF] RoomService | Starting Room Service...
+2026-06-28 23:53:35.622 +05:30 [INF] RoomService | Room Service started successfully on port 5003
+2026-06-28 23:53:36.184 +05:30 [INF] RoomService | Now listening on: http://localhost:5003
+2026-06-28 23:53:36.563 +05:30 [INF] RoomService | Application started. Press Ctrl+C to shut down.
+2026-06-28 23:53:36.699 +05:30 [INF] RoomService | Hosting environment: Development
+2026-06-28 23:53:36.727 +05:30 [INF] RoomService | Content root path: C:\Users\2492194\OneDrive - Cognizant\Documents\Internship Project\backend\backend\RoomService

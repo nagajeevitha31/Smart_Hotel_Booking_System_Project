@@ -1,0 +1,485 @@
+@if (hotelService.currentHotel()) {
+  <div class="hotel-detail-container container animate-fade-in">
+    
+    <a routerLink="/" class="back-link mb-4">← Back to Hotels</a>
+
+    <!-- Management Controls Action Bar -->
+    @if (canManage()) {
+      <div class="admin-actions-bar mb-4 animate-fade-in">
+        <span class="logo-icon">🛠️</span>
+        <strong>Management Controls:</strong>
+        <button (click)="openEditHotelModal()" class="btn btn-secondary btn-sm ml-2">Edit Hotel</button>
+        <button (click)="onDeleteHotel()" class="btn btn-danger btn-sm ml-2">Delete Hotel</button>
+      </div>
+    }
+
+    <!-- Hotel Hero Header Section -->
+    <section class="hotel-hero-section glass-card mb-8">
+      <div class="hero-info">
+        <div class="hero-meta">
+          <span class="hotel-loc-tag">📍 {{ hotelService.currentHotel().location }}</span>
+          <span class="star-rating">★ {{ hotelService.currentHotel().rating | number:'1.1-1' }} ({{ reviewService.reviews().length }} Reviews)</span>
+        </div>
+        <h1 class="hotel-detail-title">{{ hotelService.currentHotel().name }}</h1>
+        <p class="hotel-detail-desc">{{ hotelService.currentHotel().description }}</p>
+
+        <div class="hotel-amenities-row mt-4">
+          @for (amenity of getAmenities(hotelService.currentHotel().amenities); track amenity) {
+            <span class="amenity-badge">
+              {{ amenity }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <!-- Replaced Solid Gradient Background Placeholder with Dynamic Image Layout -->
+      <div class="hero-image-placeholder" style="padding: 0; overflow: hidden; background: none;">
+        <img 
+          [src]="hotelService.currentHotel().imageUrl || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop'" 
+          [alt]="hotelService.currentHotel().name" 
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"
+          onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop'" />
+      </div>
+    </section>
+
+    <!-- Detailed Splitted Column Architecture Layout -->
+    <div class="detail-columns-grid">
+      
+      <!-- Left Column: Available Rooms Inventory -->
+      <div class="rooms-column">
+        <div class="rooms-header-card glass-card mb-4">
+          <h2 class="section-title">Available Accommodations</h2>
+          <p class="subtitle-text">Select your stay dates to search current inventory</p>
+
+          <form (ngSubmit)="onSearchRooms()" class="dates-form mt-3">
+            <div class="form-group flex-1">
+              <label class="form-label">Check-In</label>
+              <input 
+                type="date" 
+                name="checkIn"
+                [min]="minDate"
+                [(ngModel)]="dates.checkIn"
+                (ngModelChange)="onDateChange()"
+                class="form-input" 
+                required />
+            </div>
+            
+            <div class="form-group flex-1">
+              <label class="form-label">Check-Out</label>
+              <input 
+                type="date" 
+                name="checkOut"
+                [min]="minCheckOutDate"
+                [(ngModel)]="dates.checkOut"
+                (ngModelChange)="onDateChange()"
+                class="form-input" 
+                required />
+            </div>
+
+            <div class="search-btn-wrapper">
+              <button type="submit" class="btn btn-primary search-rooms-btn">
+                Check Dates
+              </button>
+            </div>
+          </form>
+        </div>
+
+        @if (availableRooms().length === 0) {
+          <div class="empty-state glass-card">
+            <span class="empty-icon">🛏️</span>
+            <h3>No Rooms Found</h3>
+            <p>Please adjust your dates or try searching another accommodation.</p>
+          </div>
+        } @else {
+          @for (room of availableRooms(); track room.roomId) {
+            <app-room-card 
+              [room]="room" 
+              [canManage]="canManage()"
+              (book)="bookRoom($event)"
+              (edit)="openEditRoomModal($event)"
+              (delete)="onDeleteRoom($event)">
+            </app-room-card>
+          }
+        }
+      </div>
+
+      <!-- Right Column: Guest Feedbacks & Reviews -->
+      <div class="reviews-column glass-card">
+        <h2 class="section-title mb-4">Guest Feedback</h2>
+
+        @if (reviewService.summaries()) {
+          <div class="summary-stats-box mb-4">
+            <div class="avg-rating-cell">
+              <span class="avg-val">{{ reviewService.summaries().averageRating | number:'1.1-1' }}</span>
+              <span class="avg-stars">★★★★★</span>
+              <span class="avg-count">Based on {{ reviewService.summaries().totalReviews }} reviews</span>
+            </div>
+
+            <div class="rating-bars-cell">
+              @for (row of getStarRows(); track row.stars) {
+                <div class="star-row">
+                  <span class="star-lbl">{{ row.stars }}★</span>
+                  <div class="rating-bar-bg">
+                    <div class="rating-bar-fill" [style.width]="row.percent + '%'"></div>
+                  </div>
+                  <span class="star-count">{{ row.count }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        @if (reviewService.reviews().length === 0) {
+          <div class="empty-state">
+            <span class="empty-icon">⭐</span>
+            <h3>No Reviews Yet</h3>
+            <p>Be the first traveler to stay here and leave a review!</p>
+          </div>
+        } @else {
+          @for (rev of reviewService.reviews(); track rev.reviewId) {
+            <app-review-card [review]="rev" (helpful)="markHelpful($event)"></app-review-card>
+          }
+        }
+      </div>
+
+    </div>
+  </div>
+}
+
+<!-- Booking Confirmation Dialog Modal overlay box -->
+@if (activeBookingRoom()) {
+  <div>
+    <app-booking-form-dialog
+      [room]="activeBookingRoom()"
+      [hotelName]="hotelService.currentHotel().name"
+      [checkIn]="dates.checkIn"
+      [checkOut]="dates.checkOut"
+      [submitting]="isReserving()"
+      [(formModel)]="bookingForm"
+      (close)="activeBookingRoom.set(null)"
+      (confirm)="submitReservation()">
+    </app-booking-form-dialog>
+  </div>
+}
+
+<!-- Edit Hotel Details Overlay Dialog Sheet Box -->
+@if (isEditingHotel()) {
+  <div class="modal-overlay">
+    <div class="modal-card glass-card animate-fade-in">
+      <div class="modal-header">
+        <h2>Edit Hotel: {{ hotelService.currentHotel().name }}</h2>
+        <button (click)="isEditingHotel.set(false)" class="btn-close">✕</button>
+      </div>
+
+      <form (ngSubmit)="submitEditHotel()" #editHotelFormRef="ngForm">
+        <div class="form-group mb-3">
+          <label class="form-label">Hotel Name</label>
+          <input type="text" name="hotelName" [(ngModel)]="editHotelForm.name" required minlength="2" #editHotelNameRef="ngModel" class="form-input" />
+          @if (editHotelNameRef.touched && editHotelNameRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelNameRef.errors?.['required']) {
+                <span>Hotel name is required.</span>
+              }
+              @if (editHotelNameRef.errors?.['minlength']) {
+                <span>Hotel name must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Location (Description)</label>
+          <input type="text" name="hotelLoc" [(ngModel)]="editHotelForm.location" required minlength="2" #editHotelLocRef="ngModel" class="form-input" />
+          @if (editHotelLocRef.touched && editHotelLocRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelLocRef.errors?.['required']) {
+                <span>Location is required.</span>
+              }
+              @if (editHotelLocRef.errors?.['minlength']) {
+                <span>Location must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Address</label>
+          <input type="text" name="hotelAddr" [(ngModel)]="editHotelForm.address" required minlength="2" #editHotelAddrRef="ngModel" class="form-input" />
+          @if (editHotelAddrRef.touched && editHotelAddrRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelAddrRef.errors?.['required']) {
+                <span>Address is required.</span>
+              }
+              @if (editHotelAddrRef.errors?.['minlength']) {
+                <span>Address must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">City</label>
+          <input type="text" name="hotelCity" [(ngModel)]="editHotelForm.city" required minlength="2" #editHotelCityRef="ngModel" class="form-input" />
+          @if (editHotelCityRef.touched && editHotelCityRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelCityRef.errors?.['required']) {
+                <span>City is required.</span>
+              }
+              @if (editHotelCityRef.errors?.['minlength']) {
+                <span>City must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">State</label>
+          <input type="text" name="hotelState" [(ngModel)]="editHotelForm.state" required minlength="2" #editHotelStateRef="ngModel" class="form-input" />
+          @if (editHotelStateRef.touched && editHotelStateRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelStateRef.errors?.['required']) {
+                <span>State is required.</span>
+              }
+              @if (editHotelStateRef.errors?.['minlength']) {
+                <span>State must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Country</label>
+          <input type="text" name="hotelCountry" [(ngModel)]="editHotelForm.country" required minlength="2" #editHotelCountryRef="ngModel" class="form-input" />
+          @if (editHotelCountryRef.touched && editHotelCountryRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelCountryRef.errors?.['required']) {
+                <span>Country is required.</span>
+              }
+              @if (editHotelCountryRef.errors?.['minlength']) {
+                <span>Country must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Zip Code</label>
+          <input type="text" name="hotelZip" [(ngModel)]="editHotelForm.zipCode" required #editHotelZipRef="ngModel" class="form-input" />
+          @if (editHotelZipRef.touched && editHotelZipRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelZipRef.errors?.['required']) {
+                <span>Zip code is required.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Description</label>
+          <textarea name="hotelDesc" [(ngModel)]="editHotelForm.description" rows="3" required minlength="10" #editHotelDescRef="ngModel" class="form-input"></textarea>
+          @if (editHotelDescRef.touched && editHotelDescRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelDescRef.errors?.['required']) {
+                <span>Description is required.</span>
+              }
+              @if (editHotelDescRef.errors?.['minlength']) {
+                <span>Description must be at least 10 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Image URL</label>
+          <input type="text" name="hotelImg" [(ngModel)]="editHotelForm.imageUrl" class="form-input" />
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Contact Number</label>
+          <input type="text" name="hotelContact" [(ngModel)]="editHotelForm.contactNumber" class="form-input" />
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" name="hotelEmail" [(ngModel)]="editHotelForm.email" #editHotelEmailRef="ngModel" class="form-input" />
+          @if (editHotelEmailRef.touched && editHotelEmailRef.invalid) {
+            <span class="validation-error">
+              @if (editHotelEmailRef.errors?.['email']) {
+                <span>Please enter a valid email address.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Amenities (Comma separated)</label>
+          <input type="text" name="hotelAmenities" [(ngModel)]="editHotelForm.amenities" class="form-input" />
+        </div>
+
+        <button type="submit" [disabled]="editHotelFormRef.invalid" class="btn btn-primary w-full mt-4">
+          Save Changes
+        </button>
+      </form>
+    </div>
+  </div>
+}
+
+<!-- Edit Room Inventory Details Sheet Overlay Box Modal -->
+@if (editingRoom()) {
+  <div class="modal-overlay">
+    <div class="modal-card glass-card animate-fade-in">
+      <div class="modal-header">
+        <h2>Edit Room: {{ editingRoom().roomNumber }}</h2>
+        <button (click)="editingRoom.set(null)" class="btn-close">✕</button>
+      </div>
+
+      <form (ngSubmit)="submitEditRoom()" #editRoomFormRef="ngForm">
+        <div class="form-group mb-3">
+          <label class="form-label">Room Number</label>
+          <input type="text" name="roomNumber" [(ngModel)]="editRoomForm.roomNumber" required #editRoomNumberRef="ngModel" class="form-input" />
+          @if (editRoomNumberRef.touched && editRoomNumberRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomNumberRef.errors?.['required']) {
+                <span>Room number is required.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Room Type</label>
+          <input type="text" name="roomType" [(ngModel)]="editRoomForm.roomType" required minlength="2" #editRoomTypeRef="ngModel" class="form-input" />
+          @if (editRoomTypeRef.touched && editRoomTypeRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomTypeRef.errors?.['required']) {
+                <span>Room type is required.</span>
+              }
+              @if (editRoomTypeRef.errors?.['minlength']) {
+                <span>Room type must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Price Per Night (INR)</label>
+          <input type="number" name="roomPrice" [(ngModel)]="editRoomForm.pricePerNight" required [min]="1" #editRoomPriceRef="ngModel" class="form-input" />
+          @if (editRoomPriceRef.touched && editRoomPriceRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomPriceRef.errors?.['required']) {
+                <span>Price is required.</span>
+              }
+              @if (editRoomPriceRef.errors?.['min']) {
+                <span>Price must be at least 1.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Description</label>
+          <textarea name="roomDesc" [(ngModel)]="editRoomForm.description" rows="3" required minlength="10" #editRoomDescRef="ngModel" class="form-input"></textarea>
+          @if (editRoomDescRef.touched && editRoomDescRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomDescRef.errors?.['required']) {
+                <span>Description is required.</span>
+              }
+              @if (editRoomDescRef.errors?.['minlength']) {
+                <span>Description must be at least 10 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Max Occupancy</label>
+          <input type="number" name="roomOccupancy" [(ngModel)]="editRoomForm.maxOccupancy" required [min]="1" #editRoomOccupancyRef="ngModel" class="form-input" />
+          @if (editRoomOccupancyRef.touched && editRoomOccupancyRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomOccupancyRef.errors?.['required']) {
+                <span>Max occupancy is required.</span>
+              }
+              @if (editRoomOccupancyRef.errors?.['min']) {
+                <span>Max occupancy must be at least 1.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Bed Count</label>
+          <input type="number" name="roomBedCount" [(ngModel)]="editRoomForm.bedCount" required [min]="1" #editRoomBedCountRef="ngModel" class="form-input" />
+          @if (editRoomBedCountRef.touched && editRoomBedCountRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomBedCountRef.errors?.['required']) {
+                <span>Bed count is required.</span>
+              }
+              @if (editRoomBedCountRef.errors?.['min']) {
+                <span>Bed count must be at least 1.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Bed Type</label>
+          <input type="text" name="roomBedType" [(ngModel)]="editRoomForm.bedType" required minlength="2" #editRoomBedTypeRef="ngModel" class="form-input" />
+          @if (editRoomBedTypeRef.touched && editRoomBedTypeRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomBedTypeRef.errors?.['required']) {
+                <span>Bed type is required.</span>
+              }
+              @if (editRoomBedTypeRef.errors?.['minlength']) {
+                <span>Bed type must be at least 2 characters.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Floor Number</label>
+          <input type="number" name="roomFloor" [(ngModel)]="editRoomForm.floorNumber" required [min]="1" #editRoomFloorRef="ngModel" class="form-input" />
+          @if (editRoomFloorRef.touched && editRoomFloorRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomFloorRef.errors?.['required']) {
+                <span>Floor number is required.</span>
+              }
+              @if (editRoomFloorRef.errors?.['min']) {
+                <span>Floor number must be at least 1.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Room Size (Sq Ft)</label>
+          <input type="number" name="roomSize" [(ngModel)]="editRoomForm.roomSize" required [min]="1" #editRoomSizeRef="ngModel" class="form-input" />
+          @if (editRoomSizeRef.touched && editRoomSizeRef.invalid) {
+            <span class="validation-error">
+              @if (editRoomSizeRef.errors?.['required']) {
+                <span>Room size is required.</span>
+              }
+              @if (editRoomSizeRef.errors?.['min']) {
+                <span>Room size must be at least 1.</span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Room Image URL</label>
+          <input type="text" name="roomImg" [(ngModel)]="editRoomForm.imageUrl" class="form-input" />
+        </div>
+
+        <div class="form-group mb-3" style="display: flex; align-items: center; gap: 0.5rem;">
+          <input type="checkbox" name="roomAvailable" id="roomAvailable" [(ngModel)]="editRoomForm.isAvailable" />
+          <label for="roomAvailable" class="form-label mb-0 cursor-pointer" style="margin-bottom: 0;">Available for Booking</label>
+        </div>
+
+        <button type="submit" [disabled]="editRoomFormRef.invalid" class="btn btn-primary w-full mt-4">
+          Save Changes
+        </button>
+      </form>
+    </div>
+  </div>
+}

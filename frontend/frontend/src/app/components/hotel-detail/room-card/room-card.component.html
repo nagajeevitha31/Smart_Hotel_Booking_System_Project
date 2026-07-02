@@ -1,0 +1,54 @@
+<div class="room-card glass-card mb-4">
+  <div class="room-main-info">
+    
+    <!-- Room Thumbnail Section -->
+    <div class="room-image-side">
+      <img 
+        [src]="room().imageUrl || 'assets/images/default-room.jpg'" 
+        [alt]="room().roomType" 
+        class="room-card-image" 
+        onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop'" />
+    </div>
+
+    <!-- Room Specifics & Details Section -->
+    <div class="room-details-left">
+      <div class="room-type-header">
+        <h3 class="room-type">{{ room().roomType }}</h3>
+        <span class="badge" [ngClass]="room().isAvailable ? 'badge-success' : 'badge-danger'">
+          {{ room().isAvailable ? 'Available' : 'Booked Out' }}
+        </span>
+      </div>
+      
+      <p class="room-desc">{{ room().description }}</p> 
+      
+      <div class="room-amenities">
+        @for (am of room().amenities; track am.amenityId) {
+          <span class="room-am-badge">✓ {{ am.name }}</span>
+        }
+      </div>
+    </div>
+
+    <!-- Pricing & Action Center -->
+    <div class="room-price-right">
+      <span class="price-num">{{ (room().pricePerNight || room().price) | currency:'INR' }}</span>
+      <span class="price-lbl">per night</span>
+
+      <button 
+        (click)="onBookClick()" 
+        [disabled]="!room().isAvailable"
+        class="btn btn-primary w-full mt-3">
+        Book Room
+      </button>
+
+      @if (canManage()) {
+        <button (click)="onEditClick()" class="btn btn-secondary w-full mt-2">
+          Edit Room
+        </button>
+        <button (click)="onDeleteClick()" class="btn btn-danger w-full mt-2">
+          Delete Room
+        </button>
+      }
+    </div>
+
+  </div>
+</div>
